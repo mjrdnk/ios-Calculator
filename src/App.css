@@ -1,22 +1,131 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Calculator {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.Result {
+  display: flex;
+  flex: 3;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.Controls-section {
+  display: flex;
+
+  flex: 7;
+}
+.Controls {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  /* grid-row-gap: 10px; */
+  grid-template-areas:
+    "options-1 options-2 options-3 operations-1"
+    "numbers-1 numbers-2 numbers-3 operations-2"
+    "numbers-4 numbers-5 numbers-6 operations-3"
+    "numbers-7 numbers-8 numbers-9 operations-4"
+    "numbers-10 numbers-10 numbers-11 operations-5";
+  align-items: center;
+  justify-items: center;
+}
+.Result p {
+  color: white;
+  font-size: 5em;
+  margin: 0;
+}
+.Button {
+  display: flex;
+  border-radius: 50%;
+  height: 4em;
+  width: 4em;
+  background-color: gray;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  font-weight: 900;
+  cursor: pointer;
+}
+.Button.Options {
+  background-color: lightgray;
+  color: black;
+}
+
+.Options-1 {
+  grid-area: options-1;
+}
+
+.Options-2 {
+  grid-area: options-2;
+}
+
+.Options-3 {
+  grid-area: options-3;
+}
+
+.Numbers-1 {
+  grid-area: numbers-1;
+}
+.Numbers-2 {
+  grid-area: numbers-2;
+}
+.Numbers-3 {
+  grid-area: numbers-3;
+}
+.Numbers-4 {
+  grid-area: numbers-4;
+}
+.Numbers-5 {
+  grid-area: numbers-5;
+}
+.Numbers-6 {
+  grid-area: numbers-6;
+}
+.Numbers-7 {
+  grid-area: numbers-7;
+}
+.Numbers-8 {
+  grid-area: numbers-8;
+}
+.Numbers-9 {
+  grid-area: numbers-9;
+}
+.Numbers-10 {
+  grid-area: numbers-10;
+}
+.Numbers-11 {
+  grid-area: numbers-11;
+}
+
+.Operations-1 {
+  grid-area: operations-1;
+}
+.Operations-2 {
+  grid-area: operations-2;
+}
+.Operations-3 {
+  grid-area: operations-3;
+}
+.Operations-4 {
+  grid-area: operations-4;
+}
+.Operations-5 {
+  grid-area: operations-5;
+}
+
+.Button.Operations {
+  background-color: orange;
+  color: white;
+  /* grid-area: operations; */
+}
+.Button.Numbers {
+  color: white;
+  /* grid-area: numbers; */
+}
+.Double-Button {
+  width: 100%;
 }
